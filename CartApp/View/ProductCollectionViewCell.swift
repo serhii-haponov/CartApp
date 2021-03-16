@@ -7,11 +7,11 @@
 
 import UIKit
 
-class ExpandableCell: UICollectionViewCell {
+class ProductCollectionViewCell: UICollectionViewCell {
   
-  @IBOutlet weak var photoImageview: UIImageView!
-  @IBOutlet weak var authorLabel: UILabel!
-  @IBOutlet weak var tagsLabel: UILabel!
+  @IBOutlet weak var productImageview: UIImageView!
+  @IBOutlet weak var nameLabel: UILabel!
+  @IBOutlet weak var priceLabel: UILabel!
   
   private var initialFrame: CGRect?
   private var initialCornerRadius: CGFloat?
@@ -23,12 +23,14 @@ class ExpandableCell: UICollectionViewCell {
   
   // MARK: - Configuration
   
-  func setPhotoCellWith(photo: Photo) {
-    authorLabel.text = photo.title
-    tagsLabel.text = photo.tags
-    if let url = photo.mediaURL {
-      photoImageview.loadImageUsingCacheWithURLString(url, placeHolder: UIImage(named: "placeholder"))
+  func setWith(product: ProductEntity) {
+    nameLabel.text = product.name
+    priceLabel.text = String(format: "%.2f", product.price)
+    if let imageUrl = product.imageUrl {
+        productImageview.loadImageUsingCacheWithURLString(imageUrl, placeHolder: UIImage(named: "placeholder"))
     }
+    
+    
   }
   
   private func configureAll() {
@@ -47,55 +49,55 @@ class ExpandableCell: UICollectionViewCell {
     self.layer.shadowRadius = self.contentView.layer.cornerRadius
   }
   
-  // MARK: - Showing/Hiding Logic
-  
-  func hide(in collectionView: UICollectionView, frameOfSelectedCell: CGRect) {
-    initialFrame = self.frame
-    
-    let currentY = self.frame.origin.y
-    let newY: CGFloat
-    
-    if currentY < frameOfSelectedCell.origin.y {
-      let offset = frameOfSelectedCell.origin.y - currentY
-      newY = collectionView.contentOffset.y - offset
-    } else {
-      let offset = currentY - frameOfSelectedCell.maxY
-      newY = collectionView.contentOffset.y + collectionView.frame.height + offset
-    }
-    
-    self.frame.origin.y = newY
-    
-    layoutIfNeeded()
-  }
-  
-  func show() {
-    self.frame = initialFrame ?? self.frame
-    
-    initialFrame = nil
-    
-    layoutIfNeeded()
-  }
-  
-  // MARK: - Expanding/Collapsing Logic
-  
-  func expand(in collectionView: UICollectionView) {
-    initialFrame = self.frame
-    initialCornerRadius = self.contentView.layer.cornerRadius
-    
-    self.contentView.layer.cornerRadius = 0
-    self.frame = CGRect(x: 0, y: collectionView.contentOffset.y, width: collectionView.frame.width, height: collectionView.frame.height)
-    
-    layoutIfNeeded()
-  }
-  
-  func collapse() {
-    self.contentView.layer.cornerRadius = initialCornerRadius ?? self.contentView.layer.cornerRadius
-    self.frame = initialFrame ?? self.frame
-    
-    initialFrame = nil
-    initialCornerRadius = nil
-    
-    layoutIfNeeded()
-  }
+//  // MARK: - Showing/Hiding Logic
+//
+//  func hide(in collectionView: UICollectionView, frameOfSelectedCell: CGRect) {
+//    initialFrame = self.frame
+//
+//    let currentY = self.frame.origin.y
+//    let newY: CGFloat
+//
+//    if currentY < frameOfSelectedCell.origin.y {
+//      let offset = frameOfSelectedCell.origin.y - currentY
+//      newY = collectionView.contentOffset.y - offset
+//    } else {
+//      let offset = currentY - frameOfSelectedCell.maxY
+//      newY = collectionView.contentOffset.y + collectionView.frame.height + offset
+//    }
+//
+//    self.frame.origin.y = newY
+//
+//    layoutIfNeeded()
+//  }
+//
+//  func show() {
+//    self.frame = initialFrame ?? self.frame
+//
+//    initialFrame = nil
+//
+//    layoutIfNeeded()
+//  }
+//
+//  // MARK: - Expanding/Collapsing Logic
+//
+//  func expand(in collectionView: UICollectionView) {
+//    initialFrame = self.frame
+//    initialCornerRadius = self.contentView.layer.cornerRadius
+//
+//    self.contentView.layer.cornerRadius = 0
+//    self.frame = CGRect(x: 0, y: collectionView.contentOffset.y, width: collectionView.frame.width, height: collectionView.frame.height)
+//
+//    layoutIfNeeded()
+//  }
+//
+//  func collapse() {
+//    self.contentView.layer.cornerRadius = initialCornerRadius ?? self.contentView.layer.cornerRadius
+//    self.frame = initialFrame ?? self.frame
+//
+//    initialFrame = nil
+//    initialCornerRadius = nil
+//
+//    layoutIfNeeded()
+//  }
   
 }

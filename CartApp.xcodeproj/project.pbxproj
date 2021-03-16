@@ -29,6 +29,7 @@
 		A815592526008E52002FF168 /* CartDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A815592426008E52002FF168 /* CartDataSource.swift */; };
 		A81559292600951E002FF168 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81559282600951E002FF168 /* ActivityView.swift */; };
 		A815592C260096A1002FF168 /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A815592B260096A1002FF168 /* ProductCollectionViewCell.swift */; };
+		A815593026009CB6002FF168 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A815592F26009CB6002FF168 /* UIImageView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		A815592426008E52002FF168 /* CartDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartDataSource.swift; sourceTree = "<group>"; };
 		A81559282600951E002FF168 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 		A815592B260096A1002FF168 /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
+		A815592F26009CB6002FF168 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,7 @@
 				A8130B8325FFD44B001A6646 /* InternetMonitor.swift */,
 				A8130B8D2600838F001A6646 /* Observable.swift */,
 				A8130B9126008437001A6646 /* FetchDataController.swift */,
+				A815592F26009CB6002FF168 /* UIImageView+Extension.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 				A8130B7225FFC92B001A6646 /* RequestService.swift in Sources */,
 				A8130B5125FFC474001A6646 /* CartListViewController.swift in Sources */,
 				A8130B7925FFC9D2001A6646 /* CartApiService.swift in Sources */,
+				A815593026009CB6002FF168 /* UIImageView+Extension.swift in Sources */,
 				A8130B6725FFC706001A6646 /* Result.swift in Sources */,
 				A8130B4D25FFC474001A6646 /* AppDelegate.swift in Sources */,
 				A8130B7D25FFCAA9001A6646 /* ProductModel.swift in Sources */,

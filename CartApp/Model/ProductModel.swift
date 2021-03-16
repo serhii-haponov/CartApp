@@ -20,7 +20,8 @@ struct Product: Codable {
     
     private enum CodingKeys: String, CodingKey {
         case productID = "product_id"
-        case name, price, imageUrl
+        case imageUrl = "image"
+        case name, price
     }
 }
 
