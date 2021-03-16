@@ -107,11 +107,20 @@ class CartListViewController: UICollectionViewController {
         }
     }
     
-    //  // MARK: - CollectionView delegate
-    //
-    //  override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-    //    animationView.startExpandableAnimation(with: self, didSelectItemAt: indexPath)
-    //  }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let indexPath = sender as? IndexPath {
+            if let product = viewModel.fetchObjectAtIndex(index: indexPath) {
+                let viewController = segue.destination as? ProductDetailViewController
+                viewController?.image = product.imageUrl
+            }
+        }
+    }
+    
+    // MARK: - CollectionView delegate
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "ProductDetailViewController", sender: indexPath)
+    }
     
     // MARK: - CollectionView DataSource
     
@@ -126,7 +135,7 @@ class CartListViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return viewModel.fetchCountForView()
     }
-        
+    
     // MARK: - Deinit
     
     deinit {
