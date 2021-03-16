@@ -23,6 +23,12 @@
 		A8130B7D25FFCAA9001A6646 /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8130B7C25FFCAA9001A6646 /* ProductModel.swift */; };
 		A8130B8125FFCFAF001A6646 /* ParserHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8130B8025FFCFAF001A6646 /* ParserHelper.swift */; };
 		A8130B8425FFD44B001A6646 /* InternetMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8130B8325FFD44B001A6646 /* InternetMonitor.swift */; };
+		A8130B8B26008329001A6646 /* CartListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8130B8A26008329001A6646 /* CartListViewModel.swift */; };
+		A8130B8E2600838F001A6646 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8130B8D2600838F001A6646 /* Observable.swift */; };
+		A8130B9226008437001A6646 /* FetchDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8130B9126008437001A6646 /* FetchDataController.swift */; };
+		A815592526008E52002FF168 /* CartDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A815592426008E52002FF168 /* CartDataSource.swift */; };
+		A81559292600951E002FF168 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81559282600951E002FF168 /* ActivityView.swift */; };
+		A815592C260096A1002FF168 /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A815592B260096A1002FF168 /* ProductCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +50,12 @@
 		A8130B7C25FFCAA9001A6646 /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
 		A8130B8025FFCFAF001A6646 /* ParserHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParserHelper.swift; sourceTree = "<group>"; };
 		A8130B8325FFD44B001A6646 /* InternetMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetMonitor.swift; sourceTree = "<group>"; };
+		A8130B8A26008329001A6646 /* CartListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartListViewModel.swift; sourceTree = "<group>"; };
+		A8130B8D2600838F001A6646 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		A8130B9126008437001A6646 /* FetchDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchDataController.swift; sourceTree = "<group>"; };
+		A815592426008E52002FF168 /* CartDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartDataSource.swift; sourceTree = "<group>"; };
+		A81559282600951E002FF168 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
+		A815592B260096A1002FF168 /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +93,9 @@
 				A8130B7F25FFCF8C001A6646 /* Helper */,
 				A8130B6425FFC6E7001A6646 /* Services */,
 				A8130B7B25FFCA33001A6646 /* Model */,
+				A8155927260094F3002FF168 /* View */,
 				A8130B8825FFD5AC001A6646 /* Controllers */,
+				A8130B89260082D0001A6646 /* ViewModel */,
 				A8130B5525FFC474001A6646 /* CartApp.xcdatamodeld */,
 			);
 			path = CartApp;
@@ -129,6 +143,8 @@
 			children = (
 				A8130B8025FFCFAF001A6646 /* ParserHelper.swift */,
 				A8130B8325FFD44B001A6646 /* InternetMonitor.swift */,
+				A8130B8D2600838F001A6646 /* Observable.swift */,
+				A8130B9126008437001A6646 /* FetchDataController.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -159,6 +175,24 @@
 				A8130B5225FFC474001A6646 /* Main.storyboard */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		A8130B89260082D0001A6646 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A8130B8A26008329001A6646 /* CartListViewModel.swift */,
+				A815592426008E52002FF168 /* CartDataSource.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A8155927260094F3002FF168 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A81559282600951E002FF168 /* ActivityView.swift */,
+				A815592B260096A1002FF168 /* ProductCollectionViewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,7 +266,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8130B7525FFC93F001A6646 /* RequestFactory.swift in Sources */,
+				A815592526008E52002FF168 /* CartDataSource.swift in Sources */,
+				A8130B8E2600838F001A6646 /* Observable.swift in Sources */,
 				A8130B6F25FFC90E001A6646 /* RequestHandler.swift in Sources */,
+				A8130B8B26008329001A6646 /* CartListViewModel.swift in Sources */,
+				A81559292600951E002FF168 /* ActivityView.swift in Sources */,
 				A8130B8125FFCFAF001A6646 /* ParserHelper.swift in Sources */,
 				A8130B7225FFC92B001A6646 /* RequestService.swift in Sources */,
 				A8130B5125FFC474001A6646 /* CartListViewController.swift in Sources */,
@@ -241,9 +279,11 @@
 				A8130B4D25FFC474001A6646 /* AppDelegate.swift in Sources */,
 				A8130B7D25FFCAA9001A6646 /* ProductModel.swift in Sources */,
 				A8130B6B25FFC739001A6646 /* ErrorResult.swift in Sources */,
+				A8130B9226008437001A6646 /* FetchDataController.swift in Sources */,
 				A8130B8425FFD44B001A6646 /* InternetMonitor.swift in Sources */,
 				A8130B4F25FFC474001A6646 /* SceneDelegate.swift in Sources */,
 				A8130B5725FFC474001A6646 /* CartApp.xcdatamodeld in Sources */,
+				A815592C260096A1002FF168 /* ProductCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

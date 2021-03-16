@@ -11,7 +11,7 @@ protocol CartApiServiceProtocol: class {
   func getDataWith(completion: @escaping (Result<ProductsData, ErrorResult>) -> Void)
 }
 
-final class PhotoApiService: RequestHandler, CartApiServiceProtocol {
+final class CartApiService: RequestHandler, CartApiServiceProtocol {
     
   private lazy var endPoint: String = {
     return "https://s3-eu-west-1.amazonaws.com/developer-application-test/cart/list"

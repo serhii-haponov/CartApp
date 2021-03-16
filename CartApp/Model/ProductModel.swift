@@ -15,7 +15,7 @@ struct ProductsData: Codable {
 struct Product: Codable {
     let productID: String
     let name: String
-    let price: Double
+    let price: Float
     let imageUrl: String
     
     private enum CodingKeys: String, CodingKey {
