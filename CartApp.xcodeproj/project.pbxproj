@@ -96,9 +96,7 @@
 				A8130B6425FFC6E7001A6646 /* Services */,
 				A8130B7B25FFCA33001A6646 /* Model */,
 				A8155927260094F3002FF168 /* View */,
-				A8130B8825FFD5AC001A6646 /* Controllers */,
 				A8130B89260082D0001A6646 /* ViewModel */,
-				A8130B5525FFC474001A6646 /* CartApp.xcdatamodeld */,
 			);
 			path = CartApp;
 			sourceTree = "<group>";
@@ -136,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				A8130B7C25FFCAA9001A6646 /* ProductModel.swift */,
+				A8130B5525FFC474001A6646 /* CartApp.xcdatamodeld */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -171,15 +170,6 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		A8130B8825FFD5AC001A6646 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				A8130B5025FFC474001A6646 /* CartListViewController.swift */,
-				A8130B5225FFC474001A6646 /* Main.storyboard */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
 		A8130B89260082D0001A6646 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -194,6 +184,8 @@
 			children = (
 				A81559282600951E002FF168 /* ActivityView.swift */,
 				A815592B260096A1002FF168 /* ProductCollectionViewCell.swift */,
+				A8130B5025FFC474001A6646 /* CartListViewController.swift */,
+				A8130B5225FFC474001A6646 /* Main.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";

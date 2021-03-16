@@ -9,7 +9,7 @@ import UIKit
 
 class ProductCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var productImageview: UIImageView!
+    @IBOutlet weak var productImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     
@@ -23,7 +23,7 @@ class ProductCollectionViewCell: UICollectionViewCell {
     
     override func prepareForReuse() {
         super.prepareForReuse()
-        productImageview.image = nil
+        productImageView.image = nil
     }
     
     // MARK: - Configuration
@@ -32,7 +32,7 @@ class ProductCollectionViewCell: UICollectionViewCell {
         nameLabel.text = product.name
         priceLabel.text = String(format: "%.2f", product.price)
         if let imageUrl = product.imageUrl {
-            productImageview.loadImageUsingCacheWithURLString(imageUrl, placeHolder: UIImage(named: "placeholder"))
+            productImageView.loadImageUsingCacheWithURLString(imageUrl, placeHolder: UIImage(named: "placeholder"))
         }
     }
     
