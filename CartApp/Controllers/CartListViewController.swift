@@ -12,7 +12,6 @@ class CartListViewController: UICollectionViewController {
   
   private var blockOperations: [BlockOperation] = []
   var isStatusBarHidden = false
-//  private let animationView = ExpandableView()
   
   override var prefersStatusBarHidden: Bool {
     return isStatusBarHidden
@@ -28,11 +27,6 @@ class CartListViewController: UICollectionViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    
-    // for test
-//    view.accessibilityIdentifier = "onboardingView"
-//    collectionView.accessibilityIdentifier = "onboardingTableView"
-    
     initView()
     initBinding()
     start()
